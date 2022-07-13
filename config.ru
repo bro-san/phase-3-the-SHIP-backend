@@ -16,3 +16,4 @@ run ApplicationController
 
 use CharactersController
 use ShipsController
+use CommentsController
