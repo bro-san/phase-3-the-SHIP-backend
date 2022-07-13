@@ -33,9 +33,9 @@ class ShipsController < ApplicationController
         @ship = Ship.find(params[:id])
     end
 
-    def ship_params
-      params.permit(:character1_id, :character2_id, :ship_name)
-    end
+    # def ship_params   <- doesn't seem to work?
+    #   params.permit(:character1_id, :character2_id, :name)
+    # end
 
     def get_ship_json_config()
       {
