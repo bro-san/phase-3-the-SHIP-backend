@@ -6,7 +6,7 @@ class CharactersController < ApplicationController
       #     include_ships: true
       #   ))
       # else
-        Character2.all.to_json #(get_character_json_config)
+        Character1.all.to_json #(get_character_json_config)
       # end
     end
   
@@ -40,16 +40,22 @@ class CharactersController < ApplicationController
     # end
       
     delete "/characters/:id" do 
-      find_character
+      find_both_characters
   
-      @character.destroy
-      # status 204 # this was a successful request
+      @character1.destroy
+      @character2.destroy
     end
   
     private 
   
     def find_character 
       @character = Character1.find(params[:id])
+    end
+
+    def find_both_characters 
+      @character1 = Character1.find(params[:id])
+      @character2 = Character2.find(params[:id])
+
     end
   
     # def get_character_json_config(include_ships: false)
