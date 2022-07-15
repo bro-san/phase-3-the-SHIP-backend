@@ -22,7 +22,6 @@ class CharactersController < ApplicationController
       character1.to_json
       character2 = Character2.create(character_params)
       character2.to_json
-      puts "Added to the crew!"
     end
 
     # post "/characters"do 
