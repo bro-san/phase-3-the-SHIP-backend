@@ -1,7 +1,11 @@
 class ShipsController < ApplicationController
 
+  # get "/ships" do
+  #   Ship.all.to_json #(get_ship_json_config)
+  # end
+
   get "/ships" do
-    Ship.all.to_json #(get_ship_json_config)
+    params.include?("include_comments") ? Ship.includes(:comments).to_json(get_ship_json_config(include_comments: true)) : Ship.all.to_json(get_ship_json_config)
   end
 
   get "/ships/:id" do
@@ -37,9 +41,10 @@ class ShipsController < ApplicationController
     #   params.permit(:character1_id, :character2_id, :name)
     # end
 
-    def get_ship_json_config()
-      {
-        methods: [:formatted_time]
-      }
+    def get_ship_json_config(include_comments: false)
+      if include_comments
+        options = { methods: :comment_list }
+      end
+      options
     end
   end

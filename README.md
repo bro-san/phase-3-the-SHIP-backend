@@ -1,4 +1,15 @@
-# Phase 3 Project Guidelines
+# The Ship Backend Server
+
+## Setup
+
+1. Fork and clone this repository.
+2. Run `rake db:migrate` in your terminal.
+3. Then run `rake db:seed`.
+4. Lastly, run `rake server`.
+
+You are good to go! To access the frontend code of The Ship, click [here](https://github.com/bro-san/the-SHIP-frontend).
+
+<!-- # Phase 3 Project Guidelines
 
 ## Learning Goals
 
@@ -84,7 +95,7 @@ Your React app should make fetch requests to your Sinatra backend! Here's an
 example:
 
 ```js
-fetch("http://localhost:9292/test")
+fetch('http://localhost:9292/test')
   .then((r) => r.json())
   .then((data) => console.log(data));
 ```
@@ -116,4 +127,4 @@ fetch("http://localhost:9292/test")
 [create repo]: https://docs.github.com/en/get-started/quickstart/create-a-repo
 [dbdiagram.io]: https://dbdiagram.io/
 [postman download]: https://www.postman.com/downloads/
-[network tab]: https://developer.chrome.com/docs/devtools/network/
+[network tab]: https://developer.chrome.com/docs/devtools/network/ -->
