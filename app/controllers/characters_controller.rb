@@ -30,7 +30,6 @@ class CharactersController < ApplicationController
     #   character1.to_json
     #   character2 = Character2.create(name: params[:name], gender: params[:gender], description: params[:description], imageURL: params[:imageURL], anime_name: params[:anime_name], anime_imageURL: params[:anime_imageURL])
     #   character2.to_json
-    #   puts "Added to the crew!"
     # end
   
     # patch "/characters/:id" do 
